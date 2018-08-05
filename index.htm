@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Index html</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--bootstrap css-->
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+ <script src="js/jquery.min.js" type="text/javascript"></script>
+ <script src="js/bootstrap.min.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+</head>
+
+<body>
+<header>
+<div class="jumbotron"><!--jumbotron indicates bigbox.-->
+  <div class="container text-center">
+    <h1>Gift Shop</h1>      
+    <p>Management System</p>
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.htm">Login</a></li>
+        <li ><a href="Signup.htm">Sign up</a></li>
+        <li><a href="aboutus.htm">about us</a></li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>&nbsp;</li>
+        <li><a href="contect.htm">contect us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+<main class="main">  
+<div class="container-fluid">    
+<div class="main-div">
+    <div class="panel">
+   <h2>Admin Login</h2>
+   <p>Please enter your email and password</p>
+   </div>
+    <form id="Login" action="home.htm">
+
+        <div class="form-group">
+            <input class="form-control" id="inputEmail" placeholder="Email Address" type="email">
+        </div>
+        <div class="form-group">
+            <input class="form-control" id="inputPassword" placeholder="Password" type="password">
+        </div>
+        <div class="forgot">
+        <a href="Signup.htm">new user? click here.</a>
+      </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    </div> 
+  </div>
+   </div>
+</div>
+</main>
+<footer>
+  <div class="container-fluid text-center">
+  <p>@all Copyright reserved by GauravPrajapati.</p>  
+  </div>
+</footer>
+
+</body>
+</html>

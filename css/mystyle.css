@@ -1,0 +1,134 @@
+body{
+    height: 100%;
+    width:auto;
+    border:2px solid  black;
+    margin: 10px 10px 10px 10px;
+    
+}    
+    /*header part*/
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+         margin-bottom:0; 
+      margin:5px 5px 5px 5px;
+      
+         border-radius: 5px;
+         box-shadow: 0 2px 4px grey;
+      background-color: antiquewhite;
+    }
+/*navbar part*/
+/* Remove the navbar's default rounded borders and increase the bottom margin */ 
+    .navbar {
+      margin:10px 5px 5px 5px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px grey;
+     
+     
+    }
+ /*header part ends*/
+
+     /* Add a gray background color and some padding to the footer */
+    /* footer */
+    footer> .container-fluid {
+      background-color:black;
+        width: auto;
+        color: white;
+        border-radius: 5px;
+        margin:5px 5px 5px 5px;
+        padding: 25px;
+        box-shadow:0  2px  4px grey ;
+        
+    }
+/*login-form*/
+.main .container-fluid{ background-color:white; height:350px; 
+                      width: auto;
+                      margin-top: 10px;
+                      margin-left: 5px;
+                      margin-bottom: 10px;
+                      margin-right: 5px;
+                      border-radius:5px; 
+                      box-shadow: 0 2px 4px grey;
+                         
+                       }
+/*registration form*/
+.regmain .container-fluid{ background-color:white; height:430px; 
+                      width: auto;
+                      margin-top: 10px;
+                      margin-left: 5px;
+                      margin-bottom: 10px;
+                      margin-right: 5px;
+                      border-radius:5px; 
+                       padding-top: 20px;
+                      box-shadow: 0 2px 4px grey;
+                         
+                       }    
+/*about us*/
+.about .container-fluid{ background-color:white; height:600px; 
+                      width: auto;
+                      margin-top: 10px;
+                      margin-left: 5px;
+                      margin-bottom: 10px;
+                      margin-right: 5px;
+                      border-radius:5px; 
+                       padding-top: 20px;
+                      box-shadow: 0 2px 4px grey;
+                       }  
+.myimage .container{ width: auto;height:250px;
+    background-color:white;
+    margin: 5px 5px 5px 5px;
+    
+}
+.myimage .img-circle{border:3px solid white;
+     box-shadow:  0 2px 4px grey;
+    
+ }
+
+.aboutme .container{ width: auto;height:250px;
+    background-color:white;
+    margin: 5px 5px 5px 5px;
+    
+}
+/*contect us*/
+.cnt .container-fluid{ background-color:white; height:450px; 
+                      width: auto;
+                      margin-top: 10px;
+                      margin-left: 5px;
+                      margin-bottom: 10px;
+                      margin-right: 5px;
+                      border-radius:5px; 
+                       padding-top: 20px;
+                      box-shadow: 0 2px 4px grey;
+                       } 
+/*Dashbord home */
+.dashbord .container-fluid{ background-color:white; height:750px; 
+                      width: auto;
+                      margin-top: 10px;
+                      margin-left: 5px;
+                      margin-bottom: 10px;
+                      margin-right: 5px;
+                      border-radius:5px; 
+                       padding-top: 20px;
+                      box-shadow: 0 2px 4px grey;
+                      font-family: cursive;
+                      font-style: normal;
+                      text-transform:capitalize; 
+                       } 
+
+.dashbord .container{
+                      background-color: whitesmoke; 
+                      height:380px;
+                      margin-top: 50px; 
+                      border-radius:5px; 
+                      box-shadow: 0 2px 4px grey;
+                    }
+/*addstock*/
+.ast .container-fluid{ background-color:white; height:630px; 
+                      width: auto;
+                      margin-top: 10px;
+                      margin-left: 5px;
+                      margin-bottom: 10px;
+                      margin-right: 5px;
+                      border-radius:5px; 
+                       padding-top: 20px;
+                      box-shadow: 0 2px 4px grey;
+                        font-size: 20px;
+                       } 
