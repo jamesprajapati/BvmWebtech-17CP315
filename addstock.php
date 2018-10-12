@@ -9,17 +9,6 @@ if(isset($_GET['ok']))
 <html>
 <head>
 	<?php include("include/headstyle.php"); ?>
-  <script >function hide(){
-    var addstock = document.getElementById("stock1");
-    var updatestock =document.getElementById("stock2");
-    var frame1=document.getElementById("f1");
-    var frame2=document.getElementById("f2");
-    frame1.style.display=updatestock.checked ? "none": "block";
-   frame2.style.display=addstock.checked ? "none" : "block";
-
-
-}
-</script>
 </head>
 <body onload="hide()">
 <header>
@@ -50,6 +39,7 @@ if(isset($_GET['ok']))
                      }
                ?>         
               </div>
+              <!--addstock form-->
              <div class="form1">
                <form class="form-horizontal" method="post" action="adddb.php">      
          <div class="form-group">
@@ -97,9 +87,29 @@ if(isset($_GET['ok']))
     </form>
              </div>
           </div>  
-      
+      <!--update stock form-->
        <div id="f2">
-          <form class="form-horizontal"> 
+       <div>
+              <?php 
+                     $flag=0;
+                     if(isset($_GET['error2']))
+                     {
+                       echo '<font color="red">'.$_GET['error2'].'</font>';
+                       echo '<br><br>';
+                       $flag=1;
+                     }
+                     if(isset($_GET['ok2']))
+                      {
+                        echo '<font color="blue">You are item is updated  successfully.... </font>';
+                        echo '<br><br>';
+                        $flag=1;
+                      }
+                  ?>
+                  <script>
+                         var flag=<?php echo $flag ?>
+                  </script>
+             </div>        
+          <form class="form-horizontal" method="post" action="updatedb.php"> 
               <div class="form-group">
                   <label class="control-label col-sm-2" for="barcode">Product code:</label>
                   <div class="col-sm-10">
@@ -109,23 +119,43 @@ if(isset($_GET['ok']))
                <div class="form-group">
                   <label class="control-label col-sm-2" for="pprise">Prise:</label>
                   <div class="col-sm-10">          
-                    <input type="text" class="form-control" id="prise" placeholder="Enter Product cost" name="pprise">
+                    <input type="text" class="form-control" id="prise" placeholder="Enter Product cost" name="prise">
                   </div>
                 </div> 
                 <div class="form-group">
                     <label class="control-label col-sm-2" for="pquantity">Quantity:</label>
                     <div class="col-sm-10">          
-                      <input type="text" class="form-control" id="Quantity" placeholder="Enter Quantity of Product item" name="pquantity">
+                      <input type="text" class="form-control" id="pquantity" placeholder="Enter Quantity of Product item" name="quantity">
                     </div>
                   </div>    
                   <div class="form-group">        
                       <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-primary">UpdateStock</button>
+                        <button type="submit" class="btn btn-primary" onclick="hide()">UpdateStock</button>
                       </div>
                       </div>               
             </form>     
         </div>
 	   </div>
+     
+  <script >function hide()
+          {
+            
+            var addstock = document.getElementById("stock1");
+            var updatestock =document.getElementById("stock2");
+            var frame1=document.getElementById("f1");
+            var frame2=document.getElementById("f2");      
+            if(flag==1)
+            {     flag=0;
+                  updatestock.checked=true;
+                     
+            }
+            frame1.style.display=updatestock.checked ? "none": "block";
+            frame2.style.display=addstock.checked ? "none" : "block";    
+
+            
+          }
+
+</script>
 </main>
 <footer>
  <?php include("include/footer.php"); ?>
