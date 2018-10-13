@@ -1,3 +1,11 @@
+<?php session_start();
+if(isset($_SESSION['status']))
+{ 
+
+ header("location:dashbord.php");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,16 +26,25 @@
    <h2>Admin Login</h2>
    <p>Please enter your email and password</p>
    </div>
-    <form id="Login" action="dashbord.php">
+   <div>
+   <?php
+       if(isset($_GET['error']))
+          {
+            echo '<font color="red">'.$_GET['error'].'</font>';
+            echo '<br><br>';
+          }
+    ?>      
+   </div>
+    <form id="Login" method="post" action="login.php">
 
         <div class="form-group">
-            <input class="form-control" id="inputEmail" placeholder="Email Address" type="email" onchange="ValidateEmail() ">
+            <input class="form-control" id="inputEmail" placeholder="Email Address" type="email" name="eid" >
         </div>
         <div class="form-group">
-            <input class="form-control" id="inputPassword" placeholder="Password" type="password">
+            <input class="form-control" id="inputPassword" placeholder="Password" type="password" name="psw">
         </div>
         <div class="forgot">
-        <a href="Signup.htm">new user? click here.</a>
+        <a href="Signup.php">new user? click here.</a>
       </div>
         <br>
         <button type="submit" class="btn btn-primary">Login</button>

@@ -1,6 +1,14 @@
-<?php
-  require("database/connection.php");
-?>
+<?php session_start();
+  $msg="";
+		require("database/connection.php");
+	
+		 if(!isset($_SESSION['status']))
+		 { 
+			$msg.="<li style='list-style:none;'> plese login here..";
+			header("location:index.php?error=".$msg);
+		 }
+
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
