@@ -52,6 +52,12 @@ require('database/connection.php');
 					$_SESSION['contect']=$row['contect_no'];
 					$_SESSION['status']=true;
 					
+							 $name= $_SESSION['name'];       
+					          
+							 $dt=date("Y-m-d h:i:sa");
+					   $query="INSERT INTO loh(shopkeeper,email_id,date_timex,logx)VALUES('$name','$email','$dt','login')";
+					   mysqli_query($conn,$query) or die("wrong query");
+
 						header("location:dashbord.php");
 					
 				}
